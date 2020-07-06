@@ -19,3 +19,7 @@ yarn add hdr-process-data
 ```bash
 npm install hdr-process-data
 ```
+
+# Utilização
+
+- [Exemplo para Temperatura](https://github.com/hedrosistemas/hdr_process_data_js/tree/master/exemples)
