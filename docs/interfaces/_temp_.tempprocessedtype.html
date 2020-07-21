@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TempProcessedT | hdr-process-data</title>
+	<title>TempProcessedType | hdr-process-data</title>
 	<meta name="description" content="Documentation for hdr-process-data">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -40,6 +40,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -57,10 +59,10 @@
 					<a href="../modules/_temp_.html">&quot;temp&quot;</a>
 				</li>
 				<li>
-					<a href="_temp_.tempprocessedt.html">TempProcessedT</a>
+					<a href="_temp_.tempprocessedtype.html">TempProcessedType</a>
 				</li>
 			</ul>
-			<h1>Interface TempProcessedT</h1>
+			<h1>Interface TempProcessedType</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">TempProcessedT</span>
+						<span class="target">TempProcessedType</span>
 					</li>
 				</ul>
 			</section>
@@ -82,10 +84,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedt.html#createdat" class="tsd-kind-icon">created<wbr>At</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedt.html#mac" class="tsd-kind-icon">mac</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedt.html#rssi" class="tsd-kind-icon">rssi</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedt.html#temp" class="tsd-kind-icon">temp</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#mac" class="tsd-kind-icon">mac</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#nsample" class="tsd-kind-icon">n<wbr>Sample</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#res" class="tsd-kind-icon">res</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#rssi" class="tsd-kind-icon">rssi</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#tsample" class="tsd-kind-icon">t<wbr>Sample</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#temp" class="tsd-kind-icon">temp</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_temp_.tempprocessedtype.html#time" class="tsd-kind-icon">time</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,16 +99,23 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="createdat" class="tsd-anchor"></a>
-					<h3>created<wbr>At</h3>
-					<div class="tsd-signature tsd-kind-icon">created<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="mac" class="tsd-anchor"></a>
+					<h3>mac</h3>
+					<div class="tsd-signature tsd-kind-icon">mac<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="mac" class="tsd-anchor"></a>
-					<h3>mac</h3>
-					<div class="tsd-signature tsd-kind-icon">mac<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="nsample" class="tsd-anchor"></a>
+					<h3>n<wbr>Sample</h3>
+					<div class="tsd-signature tsd-kind-icon">n<wbr>Sample<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="res" class="tsd-anchor"></a>
+					<h3>res</h3>
+					<div class="tsd-signature tsd-kind-icon">res<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"8 bits"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"16 bits"</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -115,9 +127,23 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="tsample" class="tsd-anchor"></a>
+					<h3>t<wbr>Sample</h3>
+					<div class="tsd-signature tsd-kind-icon">t<wbr>Sample<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="temp" class="tsd-anchor"></a>
 					<h3>temp</h3>
 					<div class="tsd-signature tsd-kind-icon">temp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="time" class="tsd-anchor"></a>
+					<h3>time</h3>
+					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -128,6 +154,12 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_acc_raw_.html">&quot;acc.raw&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_fft_.html">&quot;fft&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_health_.html">&quot;health&quot;</a>
@@ -145,7 +177,7 @@
 						<a href="../modules/_temp_.html">&quot;temp&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_tempmmm_.html">&quot;tempmmm&quot;</a>
+						<a href="../modules/_temp_mmm_.html">&quot;temp.mmm&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_tilt_.html">&quot;tilt&quot;</a>
@@ -154,29 +186,56 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="_temp_.tempdetailstype.html" class="tsd-kind-icon">Temp<wbr>Details<wbr>Type</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_temp_.tempprocessedt.html" class="tsd-kind-icon">Temp<wbr>ProcessedT</a>
+						<a href="_temp_.tempprocessedtype.html" class="tsd-kind-icon">Temp<wbr>Processed<wbr>Type</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_temp_.tempprocessedt.html#createdat" class="tsd-kind-icon">created<wbr>At</a>
+								<a href="_temp_.tempprocessedtype.html#mac" class="tsd-kind-icon">mac</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_temp_.tempprocessedt.html#mac" class="tsd-kind-icon">mac</a>
+								<a href="_temp_.tempprocessedtype.html#nsample" class="tsd-kind-icon">n<wbr>Sample</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_temp_.tempprocessedt.html#rssi" class="tsd-kind-icon">rssi</a>
+								<a href="_temp_.tempprocessedtype.html#res" class="tsd-kind-icon">res</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_temp_.tempprocessedt.html#temp" class="tsd-kind-icon">temp</a>
+								<a href="_temp_.tempprocessedtype.html#rssi" class="tsd-kind-icon">rssi</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_temp_.tempprocessedtype.html#tsample" class="tsd-kind-icon">t<wbr>Sample</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_temp_.tempprocessedtype.html#temp" class="tsd-kind-icon">temp</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_temp_.tempprocessedtype.html#time" class="tsd-kind-icon">time</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_temp_.html#____tempdetails" class="tsd-kind-icon">____temp<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_temp_.html#__tempdetails" class="tsd-kind-icon">__temp<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_temp_.html#getinttime" class="tsd-kind-icon">get<wbr>Int<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_temp_.html#gettempdetails" class="tsd-kind-icon">get<wbr>Temp<wbr>Details</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/_temp_.html#processtemp" class="tsd-kind-icon">process<wbr>Temp</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_temp_.html#processor" class="tsd-kind-icon">processor</a>
 					</li>
 				</ul>
 			</nav>

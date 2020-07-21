@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;rmms&quot; | hdr-process-data</title>
+	<title>&quot;fft&quot; | hdr-process-data</title>
 	<meta name="description" content="Documentation for hdr-process-data">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_rmms_.html">&quot;rmms&quot;</a>
+					<a href="_fft_.html">&quot;fft&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;rmms&quot;</h1>
+			<h1>Module &quot;fft&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,17 +73,17 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/_rmms_.rmmsdetailstype.html" class="tsd-kind-icon">RMMSDetails<wbr>Type</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_rmms_.rmmsprocessedtype.html" class="tsd-kind-icon">RMMSProcessed<wbr>Type</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/_fft_.fftdetailstype.html" class="tsd-kind-icon">FFTDetails<wbr>Type</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_fft_.fftprocessedtype.html" class="tsd-kind-icon">FFTProcessed<wbr>Type</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_rmms_.html#getinttime" class="tsd-kind-icon">get<wbr>Int<wbr>Time</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_rmms_.html#getrmmsdetails" class="tsd-kind-icon">getRMMSDetails</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rmms_.html#processrmms" class="tsd-kind-icon">processRMMS</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_rmms_.html#processor" class="tsd-kind-icon">processor</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_fft_.html#getfftdetails" class="tsd-kind-icon">getFFTDetails</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_fft_.html#getinttime" class="tsd-kind-icon">get<wbr>Int<wbr>Time</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_fft_.html#processfft" class="tsd-kind-icon">processFFT</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_fft_.html#processor" class="tsd-kind-icon">processor</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,6 +91,32 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+					<a name="getfftdetails" class="tsd-anchor"></a>
+					<h3>getFFTDetails</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">getFFTDetails<span class="tsd-signature-symbol">(</span>raw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_fft_.fftdetailstype.html" class="tsd-signature-type">FFTDetailsType</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Protocol V 1.1
+									Return Service Configurations</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>raw: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_fft_.fftdetailstype.html" class="tsd-signature-type">FFTDetailsType</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
 					<a name="getinttime" class="tsd-anchor"></a>
 					<h3>get<wbr>Int<wbr>Time</h3>
@@ -116,37 +142,11 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-					<a name="getrmmsdetails" class="tsd-anchor"></a>
-					<h3>getRMMSDetails</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">getRMMSDetails<span class="tsd-signature-symbol">(</span>raw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_rmms_.rmmsdetailstype.html" class="tsd-signature-type">RMMSDetailsType</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Protocol V 1.1
-									Return Service Configurations</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>raw: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_rmms_.rmmsdetailstype.html" class="tsd-signature-type">RMMSDetailsType</a></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="processrmms" class="tsd-anchor"></a>
-					<h3>processRMMS</h3>
+					<a name="processfft" class="tsd-anchor"></a>
+					<h3>processFFT</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">processRMMS<span class="tsd-signature-symbol">(</span>mac<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, raw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, rssi<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_rmms_.rmmsprocessedtype.html" class="tsd-signature-type">RMMSProcessedType</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">processFFT<span class="tsd-signature-symbol">(</span>mac<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, raw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, rssi<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_fft_.fftprocessedtype.html" class="tsd-signature-type">FFTProcessedType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -154,24 +154,20 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>PROCESSAMENTO DOS DADOS DO SERVIÇO DE RMMS</p>
+									<p>PROCESSAMENTO DOS DADOS DO SERVIÇO DE FFT</p>
 								</div>
-								<p>Os dados de RMMS podem conter dados de apenas um eixo ou dados de todos os eixos.
-								Desta forma a propriedade rmms que é recebida na resposta deste método é um vetor podendo conter uma ou três posições dependendo da configuração do eixo de coleta.</p>
+								<p>Os dados de FFT podem conter dados de apenas um eixo ou dados de todos os eixos.
+								Desta forma a propriedade fft que é recebida na resposta deste método é um vetor podendo conter uma ou três posições dependendo da configuração do eixo de coleta.</p>
 								<p>Exemplo para um único eixo:</p>
-								<pre><code class="language-json">[
- {
+								<pre><code class="language-json">{
   axis: &quot;x&quot;
-  rmms: [&quot;Conteúdo do Eixo X&quot;]
- }
-]</code></pre>
+  fft: [[&quot;Conteúdo do Eixo X&quot;]]
+}</code></pre>
 								<p>Exemplo para todos os eixos:</p>
-								<pre><code class="language-json">[
- {
+								<pre><code class="language-json">{
   axis: &quot;all&quot;
-  rmms: [&quot;Conteúdo do Eixo X&quot;, &quot;Conteúdo do Eixo Y&quot;, &quot;Conteúdo do Eixo Z&quot;]
- }
-]</code></pre>
+  fft: [[&quot;Conteúdo do Eixo X&quot;], [&quot;Conteúdo do Eixo Y&quot;], [&quot;Conteúdo do Eixo Z&quot;]]
+}</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -188,7 +184,7 @@
 									<h5>time: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_rmms_.rmmsprocessedtype.html" class="tsd-signature-type">RMMSProcessedType</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_fft_.fftprocessedtype.html" class="tsd-signature-type">FFTProcessedType</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -196,7 +192,7 @@
 					<a name="processor" class="tsd-anchor"></a>
 					<h3>processor</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">processor<span class="tsd-signature-symbol">(</span>res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"8 bits"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"16 bits"</span>, axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bwHigh<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bwLow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nsCalc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tSample<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nSample<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mac<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, rssi<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_rmms_.rmmsprocessedtype.html" class="tsd-signature-type">RMMSProcessedType</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">processor<span class="tsd-signature-symbol">(</span>res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"8 bits"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"16 bits"</span>, axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, freq<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nsCalc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, tSample<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mac<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, rssi<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_fft_.fftprocessedtype.html" class="tsd-signature-type">FFTProcessedType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -214,19 +210,13 @@
 									<h5>sen: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>bwHigh: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>bwLow: <span class="tsd-signature-type">number</span></h5>
+									<h5>freq: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>nsCalc: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>tSample: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>nSample: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>payload: <span class="tsd-signature-type">string</span></h5>
@@ -241,7 +231,7 @@
 									<h5>time: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_rmms_.rmmsprocessedtype.html" class="tsd-signature-type">RMMSProcessedType</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_fft_.fftprocessedtype.html" class="tsd-signature-type">FFTProcessedType</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -256,13 +246,13 @@
 					<li class=" tsd-kind-module">
 						<a href="_acc_raw_.html">&quot;acc.raw&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_fft_.html">&quot;fft&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_health_.html">&quot;health&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_rmms_.html">&quot;rmms&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -285,22 +275,22 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/_rmms_.rmmsdetailstype.html" class="tsd-kind-icon">RMMSDetails<wbr>Type</a>
+						<a href="../interfaces/_fft_.fftdetailstype.html" class="tsd-kind-icon">FFTDetails<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_rmms_.rmmsprocessedtype.html" class="tsd-kind-icon">RMMSProcessed<wbr>Type</a>
+						<a href="../interfaces/_fft_.fftprocessedtype.html" class="tsd-kind-icon">FFTProcessed<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_rmms_.html#getinttime" class="tsd-kind-icon">get<wbr>Int<wbr>Time</a>
+						<a href="_fft_.html#getfftdetails" class="tsd-kind-icon">getFFTDetails</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_rmms_.html#getrmmsdetails" class="tsd-kind-icon">getRMMSDetails</a>
+						<a href="_fft_.html#getinttime" class="tsd-kind-icon">get<wbr>Int<wbr>Time</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_rmms_.html#processrmms" class="tsd-kind-icon">processRMMS</a>
+						<a href="_fft_.html#processfft" class="tsd-kind-icon">processFFT</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_rmms_.html#processor" class="tsd-kind-icon">processor</a>
+						<a href="_fft_.html#processor" class="tsd-kind-icon">processor</a>
 					</li>
 				</ul>
 			</nav>

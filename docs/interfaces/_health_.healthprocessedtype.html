@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RMMSProcessedT | hdr-process-data</title>
+	<title>HealthProcessedType | hdr-process-data</title>
 	<meta name="description" content="Documentation for hdr-process-data">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -40,6 +40,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -54,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_rmms_.html">&quot;rmms&quot;</a>
+					<a href="../modules/_health_.html">&quot;health&quot;</a>
 				</li>
 				<li>
-					<a href="_rmms_.rmmsprocessedt.html">RMMSProcessedT</a>
+					<a href="_health_.healthprocessedtype.html">HealthProcessedType</a>
 				</li>
 			</ul>
-			<h1>Interface RMMSProcessedT</h1>
+			<h1>Interface HealthProcessedType</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">RMMSProcessedT</span>
+						<span class="target">HealthProcessedType</span>
 					</li>
 				</ul>
 			</section>
@@ -82,11 +84,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rmms_.rmmsprocessedt.html#axis" class="tsd-kind-icon">axis</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rmms_.rmmsprocessedt.html#createdat" class="tsd-kind-icon">created<wbr>At</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rmms_.rmmsprocessedt.html#mac" class="tsd-kind-icon">mac</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rmms_.rmmsprocessedt.html#rms" class="tsd-kind-icon">rms</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rmms_.rmmsprocessedt.html#rssi" class="tsd-kind-icon">rssi</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#lastreset" class="tsd-kind-icon">last<wbr>Reset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#mac" class="tsd-kind-icon">mac</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#maxtemp" class="tsd-kind-icon">max<wbr>Temp</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#rssi" class="tsd-kind-icon">rssi</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#temp" class="tsd-kind-icon">temp</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#time" class="tsd-kind-icon">time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_health_.healthprocessedtype.html#voltage" class="tsd-kind-icon">voltage</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,16 +99,9 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="axis" class="tsd-anchor"></a>
-					<h3>axis</h3>
-					<div class="tsd-signature tsd-kind-icon">axis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="createdat" class="tsd-anchor"></a>
-					<h3>created<wbr>At</h3>
-					<div class="tsd-signature tsd-kind-icon">created<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="lastreset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> last<wbr>Reset</h3>
+					<div class="tsd-signature tsd-kind-icon">last<wbr>Reset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -116,9 +113,9 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="rms" class="tsd-anchor"></a>
-					<h3>rms</h3>
-					<div class="tsd-signature tsd-kind-icon">rms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="maxtemp" class="tsd-anchor"></a>
+					<h3>max<wbr>Temp</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Temp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -126,6 +123,27 @@
 					<a name="rssi" class="tsd-anchor"></a>
 					<h3>rssi</h3>
 					<div class="tsd-signature tsd-kind-icon">rssi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="temp" class="tsd-anchor"></a>
+					<h3>temp</h3>
+					<div class="tsd-signature tsd-kind-icon">temp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="time" class="tsd-anchor"></a>
+					<h3>time</h3>
+					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="voltage" class="tsd-anchor"></a>
+					<h3>voltage</h3>
+					<div class="tsd-signature tsd-kind-icon">voltage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -138,9 +156,15 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_health_.html">&quot;health&quot;</a>
+						<a href="../modules/_acc_raw_.html">&quot;acc.raw&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_fft_.html">&quot;fft&quot;</a>
 					</li>
 					<li class="current tsd-kind-module">
+						<a href="../modules/_health_.html">&quot;health&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rmms_.html">&quot;rmms&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -153,7 +177,7 @@
 						<a href="../modules/_temp_.html">&quot;temp&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_tempmmm_.html">&quot;tempmmm&quot;</a>
+						<a href="../modules/_temp_mmm_.html">&quot;temp.mmm&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_tilt_.html">&quot;tilt&quot;</a>
@@ -162,32 +186,56 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="_health_.healthdetailstype.html" class="tsd-kind-icon">Health<wbr>Details<wbr>Type</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rmms_.rmmsprocessedt.html" class="tsd-kind-icon">RMMSProcessedT</a>
+						<a href="_health_.healthprocessedtype.html" class="tsd-kind-icon">Health<wbr>Processed<wbr>Type</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rmms_.rmmsprocessedt.html#axis" class="tsd-kind-icon">axis</a>
+								<a href="_health_.healthprocessedtype.html#lastreset" class="tsd-kind-icon">last<wbr>Reset</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rmms_.rmmsprocessedt.html#createdat" class="tsd-kind-icon">created<wbr>At</a>
+								<a href="_health_.healthprocessedtype.html#mac" class="tsd-kind-icon">mac</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rmms_.rmmsprocessedt.html#mac" class="tsd-kind-icon">mac</a>
+								<a href="_health_.healthprocessedtype.html#maxtemp" class="tsd-kind-icon">max<wbr>Temp</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rmms_.rmmsprocessedt.html#rms" class="tsd-kind-icon">rms</a>
+								<a href="_health_.healthprocessedtype.html#rssi" class="tsd-kind-icon">rssi</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rmms_.rmmsprocessedt.html#rssi" class="tsd-kind-icon">rssi</a>
+								<a href="_health_.healthprocessedtype.html#temp" class="tsd-kind-icon">temp</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_health_.healthprocessedtype.html#time" class="tsd-kind-icon">time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_health_.healthprocessedtype.html#voltage" class="tsd-kind-icon">voltage</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_health_.html#____healthdetails" class="tsd-kind-icon">____health<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_health_.html#__healthdetails" class="tsd-kind-icon">__health<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_health_.html#gethealthdetails" class="tsd-kind-icon">get<wbr>Health<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_health_.html#getinttime" class="tsd-kind-icon">get<wbr>Int<wbr>Time</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_rmms_.html#processrmms" class="tsd-kind-icon">processRMMS</a>
+						<a href="../modules/_health_.html#processhealth" class="tsd-kind-icon">process<wbr>Health</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_health_.html#processor" class="tsd-kind-icon">processor</a>
 					</li>
 				</ul>
 			</nav>
