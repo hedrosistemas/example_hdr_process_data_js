@@ -1,40 +1,19 @@
-/**
- * DEPENDENCIES
- */
-const express = require('express');
-const cors = require('cors')
-const helmet = require('helmet')
-const bodyParser = require('body-parser')
 const { processHealth, processTemp, processRMMS } = require('hdr-process-data')
-/** */
+const { HDR_H1_ALGORITHMS } = require('./env')
 
-/**
- * SERVER INITIALIZATION
+ /**
+ * @typedef ExpressRequest
+ * @type {object}
+ * @property {Array<{type: string, data: Array<{mac: string, rssi: string, raw: string, time: string}>}>} body - Request Body
+ * @property {object} headers - Request Headers.
+ * @property {object} params - Request Params.
  */
-const server = express()
-server.use(cors())
-server.use(helmet())
-server.use(bodyParser.json())
-/** */
-
-/**
- * HDR_H1_ALGORITHMS
- */
-const HDR_H1_ALGORITHMS = {
-  "health": "health",
-  "temp": "temp",
-  "rms2": "rms2",
-  "rmms": "rmms",
-  "tilt": "tilt",
-  "fft": "fft",
-  "accRaw": "accRaw",
-}
-/** */
-
 /**
  * POSTBACK CONTROLLER
+ * @param {ExpressRequest} req
+ * @returns {void}
  */
-function postBackController(req,res) {
+module.exports = function postBackController(req,res) {
   const postBackArray = req.body
 
   let healthCollectedData = []
@@ -88,19 +67,6 @@ function postBackController(req,res) {
     console.log('***************************')
   }
 
-  return res.json({})
+  res.json({})
+  return
 }
-/** */
-
-/**
- * ROUTER REGISTER
- */
-server.post('/senddata', postBackController)
-/** */
-
-/**
- * SERVER LISTENING
- */
-const APP_PORT = process.env.PORT | 4000
-server.listen(APP_PORT, ()=> console.log(`Server Listening on PORT: ${APP_PORT}`))
-/** */
