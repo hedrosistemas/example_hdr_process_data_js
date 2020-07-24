@@ -14,7 +14,6 @@ const { processHealth, processTemp, processRMMS } = require('hdr-process-data')
 const server = express()
 server.use(cors())
 server.use(helmet())
-server.use(helmet())
 server.use(bodyParser.json())
 /** */
 
