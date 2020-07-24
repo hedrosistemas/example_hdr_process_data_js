@@ -44,7 +44,7 @@ module.exports = function postBackController(req,res) {
   const processedRMMS = [];
   if(healthCollectedData.length) {
     healthCollectedData.forEach(healthData => {
-      processedHealth.push(...processHealth(healthData.mac, healthData.raw, healthData.rssi, healthData.time))
+      processedHealth.push(processHealth(healthData.mac, healthData.raw, healthData.rssi, healthData.time))
     })
     console.log('**********HEALTH***********')
     console.table(processedHealth)
