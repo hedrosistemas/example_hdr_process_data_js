@@ -1,0 +1,13 @@
+{
+  "name": "hdr-simples-ex-process-message-temp",
+  "description": "Simple Example to Process H1 Temp Message",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "run": "node temp.js"
+  },
+  "dependencies": {
+    "hdr-process-data": "^1.0.10-beta"
+  }
+}

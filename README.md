@@ -22,4 +22,5 @@ npm install hdr-process-data
 
 # Utilização
 
-- [Exemplo para Temperatura](https://github.com/hedrosistemas/hdr_process_data_js/tree/master/exemples)
+- [Exemplo - Tratamento de temperatura](https://github.com/hedrosistemas/hdr_process_data_js/tree/master/exemples/simple_usage/temperature)
+- [Exemplo  - Servidor para integração com Sistema de Roteamento](https://github.com/hedrosistemas/hdr_process_data_js/tree/master/exemples/api_for_routing_system)
