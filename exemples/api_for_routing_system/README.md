@@ -12,7 +12,7 @@ HTTPS POST {
             "mac": "string",
             "rssi": "string",
             "raw": "string",
-            "time": "string", // timestamps On Seconds
+            "time": "string", // timestamps in Seconds on GMT 0
           }
         ]
       },
@@ -32,13 +32,13 @@ HTTPS POST {
             "mac": "4548AA000001",
             "rssi": "-87",
             "raw": "03F60072887777CA",
-            "time": "1595936680", // timestamps On Seconds
+            "time": "1595936680", // timestamps in Seconds on GMT 0
           },
           {
             "mac": "4548AA000002",
             "rssi": "-87",
             "raw": "03F60072887878CA",
-            "time": "1595936682", // timestamps On Seconds
+            "time": "1595936682", // timestamps in Seconds on GMT 0
           }
         ]
       },
@@ -49,13 +49,13 @@ HTTPS POST {
             "mac": "4548AA000001",
             "rssi": "-87",
             "raw": "034c011603ba07b607b207",
-            "time": "1595936680", // timestamps On Seconds
+            "time": "1595936680", // timestamps in Seconds on GMT 0
           },
           {
             "mac": "4548AA000002",
             "rssi": "-87",
             "raw": "034c010601ba",
-            "time": "1595936682", // timestamps On Seconds
+            "time": "1595936682", // timestamps in Seconds on GMT 0
           }
         ]
       },
@@ -66,13 +66,13 @@ HTTPS POST {
             "mac": "4548AA000001",
             "rssi": "-87",
             "raw": "030d048501050d04040406",
-            "time": "1595936680", // timestamps On Seconds
+            "time": "1595936680", // timestamps in Seconds on GMT 0
           },
           {
             "mac": "4548AA000002",
             "rssi": "-87",
             "raw": "03120485b001D92E",
-            "time": "1595936682", // timestamps On Seconds
+            "time": "1595936682", // timestamps in Seconds on GMT 0
           }
         ]
       }
