@@ -6,7 +6,7 @@ O Sistema de roteamento de mensagens da Hedro possibilita a integração fácil 
 
 As mensagens enviadas para a API seguem o modelo detalhado nos JSON abaixo.
 
-Para poder interpretar os dados "roteados" basta utilizar a biblioteca de processamento de dados da Hedro, como bem mostra no [example]('/src/postback.controller.js').
+Para poder interpretar os dados "roteados" basta utilizar a biblioteca de processamento de dados da Hedro, como bem mostra no [example](/src/postback.controller.js).
 
 Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta forma em algumas configurações de coleta os sensores fazem o envio de vários pacotes que na verdade correspondem a um único pedido de coleta. Nestes casos pode ocorrer de alguns pacotes serem perdidos durante o processo de coleta das mensagens. Os pacotes que são perdidos são representados como uma sequencia de bytes "gggg...". Desta forma a biblioteca de processamento de dados ao tentar processar estes dados que foram perdidos retornara "NaN".
 
