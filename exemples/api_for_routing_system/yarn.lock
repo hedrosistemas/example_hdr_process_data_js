@@ -273,10 +273,10 @@ fresh@0.5.2:
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
 
-hdr-process-data@^1.0.10-beta:
-  version "1.0.10-beta"
-  resolved "https://registry.yarnpkg.com/hdr-process-data/-/hdr-process-data-1.0.10-beta.tgz#1e99cd387dc886ca00bca4c19b6162c209165863"
-  integrity sha512-rpFvxUj5rU/k7yi1vzxqxc3KTcpiWsfrdfQmh3JS5uM+wHP+3J2WZT5pO8OGERIDm3Q/UtcULUUDMJpc4WiH1g==
+hdr-process-data@^1.0.11-beta:
+  version "1.0.11-beta"
+  resolved "https://registry.yarnpkg.com/hdr-process-data/-/hdr-process-data-1.0.11-beta.tgz#c585903668684c73a6be1b73ca77c09abb3a42e7"
+  integrity sha512-n7GdPguvoPbYi0xgVi6YmpTrpbWc/x7NwppYsGvmLCC7jG67T/k7p7LxsRudYM3bvLJkRwYHRHkWd99X0xWzpA==
 
 helmet-crossdomain@0.4.0:
   version "0.4.0"

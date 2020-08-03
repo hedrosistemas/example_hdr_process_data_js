@@ -1,4 +1,4 @@
-const { processHealth, processTemp, processRMMS } = require('hdr-process-data')
+const { processHealth, processTemp, processRMMS, processAccRaw } = require('hdr-process-data')
 const { HDR_H1_ALGORITHMS } = require('./env')
 
  /**
@@ -19,6 +19,7 @@ module.exports = function postBackController(req,res) {
   let healthCollectedData = []
   let tempCollectedData = []
   let rmmsCollectedData = [];
+  let accRawCollectedData = [];
 
   postBackArray.forEach(postBackData=> {
     switch(postBackData.type) {
@@ -31,6 +32,9 @@ module.exports = function postBackController(req,res) {
       case HDR_H1_ALGORITHMS.rmms:
         rmmsCollectedData = postBackData.data
         break;
+      case HDR_H1_ALGORITHMS.accRaw:
+        accRawCollectedData = postBackData.data
+        break;
       default:
         break;
     }
@@ -42,6 +46,8 @@ module.exports = function postBackController(req,res) {
   const processedHealth = [];
   const processedTemp = [];
   const processedRMMS = [];
+  let processedAccRaw = {};
+
   if(healthCollectedData.length) {
     healthCollectedData.forEach(healthData => {
       processedHealth.push(processHealth(healthData.mac, healthData.raw, healthData.rssi, healthData.time))
@@ -64,6 +70,15 @@ module.exports = function postBackController(req,res) {
     })
     console.log('***********RMMS************')
     console.table(processedRMMS)
+    console.log('***************************')
+  }
+  if(accRawCollectedData.length) {
+    accRawCollectedData.forEach(accRawData => {
+      processedAccRaw = processAccRaw(accRawData.mac, accRawData.raw, accRawData.rssi, accRawData.time)
+    })
+    console.log('**********ACC RAW**********')
+    console.table(processedAccRaw)
+    console.log(processedAccRaw.accRaw)
     console.log('***************************')
   }
 
