@@ -1,6 +1,6 @@
-const { processHealth, processTemp, processRMMS, processAccRaw } = require('hdr-process-data')
+const { processHealth, processTemp, processRMMS, processAccRaw, processFFT } = require('hdr-process-data')
 const { HDR_H1_ALGORITHMS } = require('./env')
-
+var fs = require('fs');
  /**
  * @typedef ExpressRequest
  * @type {object}
@@ -20,6 +20,8 @@ module.exports = function postBackController(req,res) {
   let tempCollectedData = []
   let rmmsCollectedData = [];
   let accRawCollectedData = [];
+  let fftCollectedData = [];
+
 
   postBackArray.forEach(postBackData=> {
     switch(postBackData.type) {
@@ -31,6 +33,9 @@ module.exports = function postBackController(req,res) {
         break;
       case HDR_H1_ALGORITHMS.rmms:
         rmmsCollectedData = postBackData.data
+        break;
+      case HDR_H1_ALGORITHMS.fft:
+        fftCollectedData = postBackData.data
         break;
       case HDR_H1_ALGORITHMS.accRaw:
         accRawCollectedData = postBackData.data
@@ -47,6 +52,7 @@ module.exports = function postBackController(req,res) {
   const processedTemp = [];
   const processedRMMS = [];
   let processedAccRaw = {};
+  let processedFFT = {};
 
   if(healthCollectedData.length) {
     healthCollectedData.forEach(healthData => {
@@ -77,8 +83,15 @@ module.exports = function postBackController(req,res) {
       processedAccRaw = processAccRaw(accRawData.mac, accRawData.raw, accRawData.rssi, accRawData.time)
     })
     console.log('**********ACC RAW**********')
-    console.table(processedAccRaw)
-    console.log(processedAccRaw.accRaw)
+    fs.writeFile(`ACC-RAW-${Date.now()}.json`, JSON.stringify(processedAccRaw), 'utf8', ()=>{});
+    console.log('***************************')
+  }
+  if(fftCollectedData.length) {  
+    fftCollectedData.forEach(fftData => {
+      processedFFT = processFFT(fftData.mac, fftData.raw, fftData.rssi, fftData.time)
+    })
+    console.log('**********  FFT  **********')
+    fs.writeFile(`FFT-${Date.now()}.json`, JSON.stringify(processedFFT), 'utf8', ()=>{});
     console.log('***************************')
   }
 
