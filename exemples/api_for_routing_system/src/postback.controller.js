@@ -1,6 +1,6 @@
+const fs = require('fs');
 const { processHealth, processTemp, processRMMS, processAccRaw, processFFT } = require('hdr-process-data')
 const { HDR_H1_ALGORITHMS } = require('./env')
-var fs = require('fs');
  /**
  * @typedef ExpressRequest
  * @type {object}
