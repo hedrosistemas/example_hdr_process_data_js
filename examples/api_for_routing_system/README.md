@@ -14,17 +14,15 @@ Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta
 
 ```javascript
 [
+
   {
-    "type": "health" | "temp" | "tempMMM" | "rms2" | "rmms" | "tilt" | "fft" | "accRaw",
-    "data": [
-      {
-        "mac": "string",
-        "rssi": "number",
-        "raw": "string",
-        "time": "string", // timestamps with time zone in Seconds on GMT 0
-      }
-    ]
-  },
+    "serviceType": 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7,
+    "collectorId": "number",
+    "mac": "string",
+    "rssi": "number",
+    "raw": "string",
+    "time": "string", // timestamps with time zone in Seconds on GMT 0
+  }
 ]
 ```
 
@@ -33,55 +31,28 @@ Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta
 ```javascript
 [
   {
-    "type": "health",
-    "data": [
-      {
-        "mac": "4548AA000001",
-        "rssi": -87,
-        "raw": "03F60072887777CA",
-        "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
-      },
-      {
-        "mac": "4548AA000002",
-        "rssi": -87,
-        "raw": "03F60072887878CA",
-        "time": "1595936682", // timestamps with time zone in Seconds on GMT 0
-      }
-    ]
+    "serviceType": 0, // health
+    "collectorId": 1,
+    "mac": "4548AA000001",
+    "rssi": -87,
+    "raw": "03F60072887777CA",
+    "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
   },
   {
-    "type": "temp",
-    "data": [
-      {
-        "mac": "4548AA000001",
-        "rssi": -87,
-        "raw": "034c011603ba07b607b207",
-        "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
-      },
-      {
-        "mac": "4548AA000002",
-        "rssi": -87,
-        "raw": "034c010601ba",
-        "time": "1595936682", // timestamps with time zone in Seconds on GMT 0
-      }
-    ]
+    "serviceType": 1, // temp
+    "collectorId": 1,
+    "mac": "4548AA000001",
+    "rssi": -87,
+    "raw": "034c011603ba07b607b207",
+    "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
   },
   {
-    "type": "rmms",
-    "data": [
-      {
-        "mac": "4548AA000001",
-        "rssi": -87,
-        "raw": "030d048501050d04040406",
-        "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
-      },
-      {
-        "mac": "4548AA000002",
-        "rssi": -87,
-        "raw": "03120485b001D92E",
-        "time": "1595936682", // timestamps with time zone in Seconds on GMT 0
-      }
-    ]
-  }
+    "serviceType": 4, // rms da velocidade (rmms)
+    "collectorId": 1,
+    "mac": "4548AA000001",
+    "rssi": -87,
+    "raw": "030d048501050d04040406",
+    "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
+  },
 ]
 ```
