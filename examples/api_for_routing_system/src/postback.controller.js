@@ -1,6 +1,7 @@
-const fs = require('fs');
+const {writeFile} = require('fs/promises');
 const { processHealth, processTemp, processRMMS, processAccRaw, processFFT } = require('hdr-process-data')
 const { HDR_H1_ALGORITHMS } = require('./env')
+
  /**
  * @typedef ExpressRequest
  * @type {object}
@@ -13,88 +14,35 @@ const { HDR_H1_ALGORITHMS } = require('./env')
  * @param {ExpressRequest} req
  * @returns {void}
  */
-module.exports = function postBackController(req,res) {
+module.exports = async function postBackController(req,res) {
   const postBackArray = req.body
 
-  let healthCollectedData = []
-  let tempCollectedData = []
-  let rmmsCollectedData = [];
-  let accRawCollectedData = [];
-  let fftCollectedData = [];
-
+  const processedMessages = []
 
   postBackArray.forEach(postBackData=> {
     switch(postBackData.type) {
       case HDR_H1_ALGORITHMS.health:
-        healthCollectedData = postBackData.data
+        processedMessages.push({serviceType: 'HEALTH', ...processHealth(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
       case HDR_H1_ALGORITHMS.temp:
-        tempCollectedData = postBackData.data
+        processedMessages.push({serviceType: 'TEMP', ...processTemp(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
       case HDR_H1_ALGORITHMS.rmms:
-        rmmsCollectedData = postBackData.data
+        processedMessages.push({serviceType: 'RMMS',...processRMMS(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
       case HDR_H1_ALGORITHMS.fft:
-        fftCollectedData = postBackData.data
+        processedMessages.push({serviceType: 'FFT', ...processFFT(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
       case HDR_H1_ALGORITHMS.accRaw:
-        accRawCollectedData = postBackData.data
+        processedMessages.push({serviceType: 'ACC RAW', ...processAccRaw(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
       default:
         break;
     }
   })
 
-  /**
-   * IF WANT TO PROCESS DATA
-   */
-  let processedHealth = {};
-  const processedTemp = [];
-  const processedRMMS = [];
-  let processedAccRaw = {};
-  let processedFFT = {};
 
-  if(healthCollectedData.length) {
-    healthCollectedData.forEach(healthData => {
-      processedHealth = processHealth(healthData.mac, healthData.raw, healthData.rssi, healthData.time)
-    })
-    console.log('**********HEALTH***********')
-    console.table(processedHealth)
-    console.log('***************************')
-  }
-  if(tempCollectedData.length) {
-    tempCollectedData.forEach(tempData => {
-      processedTemp.push(...processTemp(tempData.mac, tempData.raw, tempData.rssi, tempData.time))
-    })
-    console.log('***********TEMP************')
-    console.table(processedTemp)
-    console.log('***************************')
-  }
-  if(rmmsCollectedData.length) {
-    rmmsCollectedData.forEach(rmmsData => {
-      processedRMMS.push(...processRMMS(rmmsData.mac, rmmsData.raw, rmmsData.rssi, rmmsData.time))
-    })
-    console.log('***********RMMS************')
-    console.table(processedRMMS)
-    console.log('***************************')
-  }
-  if(accRawCollectedData.length) {
-    accRawCollectedData.forEach(accRawData => {
-      processedAccRaw = processAccRaw(accRawData.mac, accRawData.raw, accRawData.rssi, accRawData.time)
-    })
-    console.log('**********ACC RAW**********')
-    fs.writeFile(`ACC-RAW-${Date.now()}.json`, JSON.stringify(processedAccRaw), 'utf8', ()=>{});
-    console.log('***************************')
-  }
-  if(fftCollectedData.length) {  
-    fftCollectedData.forEach(fftData => {
-      processedFFT = processFFT(fftData.mac, fftData.raw, fftData.rssi, fftData.time)
-    })
-    console.log('**********  FFT  **********')
-    fs.writeFile(`FFT-${Date.now()}.json`, JSON.stringify(processedFFT), 'utf8', ()=>{});
-    console.log('***************************')
-  }
+  await writeFile(`${Date.now()}-failure.json`, JSON.stringify(processedMessages), 'utf8', ()=>{});
+  res.status(200).json({})
 
-  res.json({})
-  return
 }

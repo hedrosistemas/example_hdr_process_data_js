@@ -12,7 +12,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "hdr-process-data": "^1.0.11-beta",
+    "hdr-process-data": "^1.0.21-beta",
     "helmet": "^3.23.3"
   },
   "devDependencies": {

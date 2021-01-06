@@ -594,10 +594,10 @@ has-yarn@^2.1.0:
   resolved "https://registry.yarnpkg.com/has-yarn/-/has-yarn-2.1.0.tgz#137e11354a7b5bf11aa5cb649cf0c6f3ff2b2e77"
   integrity sha512-UqBRqi4ju7T+TqGNdqAO0PaSVGsDGJUBQvk9eUWNGRY1CFGDzYhLWoM7JQEemnlvVcv/YEmc2wNW8BC24EnUsw==
 
-hdr-process-data@^1.0.11-beta:
-  version "1.0.11-beta"
-  resolved "https://registry.yarnpkg.com/hdr-process-data/-/hdr-process-data-1.0.11-beta.tgz#c585903668684c73a6be1b73ca77c09abb3a42e7"
-  integrity sha512-n7GdPguvoPbYi0xgVi6YmpTrpbWc/x7NwppYsGvmLCC7jG67T/k7p7LxsRudYM3bvLJkRwYHRHkWd99X0xWzpA==
+hdr-process-data@^1.0.21-beta:
+  version "1.0.21-beta"
+  resolved "https://registry.yarnpkg.com/hdr-process-data/-/hdr-process-data-1.0.21-beta.tgz#275efab04403bb3f22a3cc59759cfce27ea01050"
+  integrity sha512-9OmtkmRmSEVmNuxfZkWSMGXpnHp7gAyiy2rrWMLKOUbDVSjHOV9tNEXu4AVPN+KWbYbU+3inf+whh2KifHrBiQ==
 
 helmet-crossdomain@0.4.0:
   version "0.4.0"

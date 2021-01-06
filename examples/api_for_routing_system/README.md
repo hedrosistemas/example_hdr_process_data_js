@@ -21,7 +21,7 @@ Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta
         "mac": "string",
         "rssi": "number",
         "raw": "string",
-        "time": "number", // timestamps with time zone in Seconds on GMT 0
+        "time": "string", // timestamps with time zone in Seconds on GMT 0
       }
     ]
   },
@@ -39,13 +39,13 @@ Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta
         "mac": "4548AA000001",
         "rssi": -87,
         "raw": "03F60072887777CA",
-        "time": 1595936680, // timestamps with time zone in Seconds on GMT 0
+        "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
       },
       {
         "mac": "4548AA000002",
         "rssi": -87,
         "raw": "03F60072887878CA",
-        "time": 1595936682, // timestamps with time zone in Seconds on GMT 0
+        "time": "1595936682", // timestamps with time zone in Seconds on GMT 0
       }
     ]
   },
@@ -56,13 +56,13 @@ Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta
         "mac": "4548AA000001",
         "rssi": -87,
         "raw": "034c011603ba07b607b207",
-        "time": 1595936680, // timestamps with time zone in Seconds on GMT 0
+        "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
       },
       {
         "mac": "4548AA000002",
         "rssi": -87,
         "raw": "034c010601ba",
-        "time": 1595936682, // timestamps with time zone in Seconds on GMT 0
+        "time": "1595936682", // timestamps with time zone in Seconds on GMT 0
       }
     ]
   },
@@ -73,13 +73,13 @@ Vale ressaltar que os sensores da Hedro trabalham com o padrão de Beacon, desta
         "mac": "4548AA000001",
         "rssi": -87,
         "raw": "030d048501050d04040406",
-        "time": 1595936680, // timestamps with time zone in Seconds on GMT 0
+        "time": "1595936680", // timestamps with time zone in Seconds on GMT 0
       },
       {
         "mac": "4548AA000002",
         "rssi": -87,
         "raw": "03120485b001D92E",
-        "time": 1595936682, // timestamps with time zone in Seconds on GMT 0
+        "time": "1595936682", // timestamps with time zone in Seconds on GMT 0
       }
     ]
   }
