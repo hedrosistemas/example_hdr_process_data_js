@@ -41,7 +41,7 @@ module.exports = async function postBackController(req,res) {
     }
   })
 
-
+  
   await writeFile(`${Date.now()}-failure.json`, JSON.stringify(processedMessages), 'utf8', ()=>{});
   res.status(200).json({})
 
