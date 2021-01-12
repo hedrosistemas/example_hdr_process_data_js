@@ -1,5 +1,5 @@
 const {writeFile} = require('fs/promises');
-const { processHealth, processTemp, processRMMS, processAccRaw, processFFT } = require('hdr-process-data')
+const { processHealth, processTemp, processRMMS, processAccRaw, processFFT, hdrServicesType } = require('hdr-process-data')
 const { HDR_H1_ALGORITHMS } = require('./env')
 
  /**
@@ -21,19 +21,19 @@ module.exports = async function postBackController(req,res) {
 
   postBackArray.forEach(postBackData=> {
     switch(postBackData.type) {
-      case HDR_H1_ALGORITHMS.health:
+      case hdrServicesType.health:
         processedMessages.push({serviceType: 'HEALTH', ...processHealth(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
-      case HDR_H1_ALGORITHMS.temp:
+      case hdrServicesType.temp:
         processedMessages.push({serviceType: 'TEMP', ...processTemp(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
-      case HDR_H1_ALGORITHMS.rmms:
+      case hdrServicesType.rmms:
         processedMessages.push({serviceType: 'RMMS',...processRMMS(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
-      case HDR_H1_ALGORITHMS.fft:
+      case hdrServicesType.fft:
         processedMessages.push({serviceType: 'FFT', ...processFFT(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
-      case HDR_H1_ALGORITHMS.accRaw:
+      case hdrServicesType.accRaw:
         processedMessages.push({serviceType: 'ACC RAW', ...processAccRaw(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
       default:
