@@ -20,7 +20,7 @@ module.exports = async function postBackController(req,res) {
   const processedMessages = []
 
   postBackArray.forEach(postBackData=> {
-    switch(postBackData.type) {
+    switch(postBackData.serviceType) {
       case hdrServicesType.health:
         processedMessages.push({serviceType: 'HEALTH', ...processHealth(postBackData.data[0].mac, postBackData.data[0].raw, postBackData.data[0].rssi, String(postBackData.data[0].time))})
         break;
