@@ -22,4 +22,4 @@ npm install hdr-process-data
 
 # Utilização
 
-- [Exemplo  - Servidor para integração com Sistema de Roteamento](https://github.com/hedrosistemas/hdr_process_data_js/tree/master/exemples/api_for_routing_system)
+- [Exemplo  - Servidor para integração com Sistema de Roteamento](https://github.com/hedrosistemas/hdr_process_data_js/tree/master/examples/api_for_routing_system)
