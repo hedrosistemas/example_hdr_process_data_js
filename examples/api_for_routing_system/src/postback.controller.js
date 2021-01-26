@@ -5,7 +5,7 @@ const { HDR_H1_ALGORITHMS } = require('./env')
  /**
  * @typedef ExpressRequest
  * @type {object}
- * @property {Array<{type: string, data: Array<{mac: string, rssi: string, raw: string, time: string}>}>} body - Request Body
+ * @property {Array<{type: string, data: Array<{serviceType: number, collectorId: number, mac: string, rssi: string, raw: string, time: string}>}>} body - Request Body
  * @property {object} headers - Request Headers.
  * @property {object} params - Request Params.
  */
