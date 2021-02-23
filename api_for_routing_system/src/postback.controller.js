@@ -38,7 +38,6 @@ module.exports = async function postBackController(req,res) {
     }
   })
 
-  console.log(processedMessages)
   await writeFile(`${Date.now()}.json`, JSON.stringify(processedMessages), 'utf8');
 
   res.status(200).json({})
