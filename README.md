@@ -1,5 +1,13 @@
 # HDR Process Data JS
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=bugs)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=hedrosistemas_hdr_process_data_js&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=hedrosistemas_hdr_process_data_js)
+
 Hedro Sistemas - Bilioteca de processamento de dados
 
 <a href="https://www.hedro.com.br/" alt="Hedro">
